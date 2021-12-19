@@ -1257,6 +1257,23 @@ class DogecoinTestnet(Dogecoin):
     WIF_BYTE = bytes.fromhex("f1")
     GENESIS_HASH = ('bb0a78264637406b6360aad926284d54'
                     '4d7049f45189db5664f3c4d07350559e')
+    
+class PRUXCoin(AuxPowMixin, Coin):
+    NAME = "PRUXCoin"
+    SHORTNAME = "PRUX"
+    NET = "mainnet"
+    XPUB_VERBYTES = bytes.fromhex("0488b21E")
+    XPRV_VERBYTES = bytes.fromhex("0488ADE4")
+    P2PKH_VERBYTE = bytes.fromhex("55")
+    P2SH_VERBYTES = (bytes.fromhex("95"),)
+    WIF_BYTE = bytes.fromhex("b7")
+    GENESIS_HASH = ('32dca787cfb73d50595a599b6fd72afc'
+                    'e9a7c52ead22b8f15dfd8aabc5eaac32')
+    TX_COUNT = 27583427
+    TX_COUNT_HEIGHT = 1604979
+    TX_PER_BLOCK = 20
+    REORG_LIMIT = 2000
+    DESERIALIZER = lib_tx.DeserializerAuxPowSegWit
 
 
 # Source: https://github.com/dashpay/dash
