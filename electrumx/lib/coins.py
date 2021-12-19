@@ -1265,7 +1265,7 @@ class PRUXCoin(AuxPowMixin, Coin):
     XPUB_VERBYTES = bytes.fromhex("0488b21E")
     XPRV_VERBYTES = bytes.fromhex("0488ADE4")
     P2PKH_VERBYTE = bytes.fromhex("55")
-    P2SH_VERBYTES = (bytes.fromhex("95"),)
+    P2SH_VERBYTES = (bytes.fromhex("55"),)
     WIF_BYTE = bytes.fromhex("b7")
     GENESIS_HASH = ('32dca787cfb73d50595a599b6fd72afc'
                     'e9a7c52ead22b8f15dfd8aabc5eaac32')
